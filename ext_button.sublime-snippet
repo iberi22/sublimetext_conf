@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+{
+    xtype       : 'button',
+    width       : 60,
+    height      : 56,
+    text        : 'Regresar',
+    scale       : 'large',
+    iconCls     : 'regresar',
+    iconAlign   : 'top',
+    hidden      : false,
+    handler     : function(){ BloqBtn(this); }
+}
+]]>
+	</content>
+
+	<tabTrigger>ext.button</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

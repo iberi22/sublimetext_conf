@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+<div id="form-validate">
+    <input type="text" data-validate="upercase"/>
+    <input type="text" data-validate="integer"/>
+</div>
+<script>
+	\$W.Form.validate("id_form");
+</script>
+]]>
+	</content>
+
+	<tabTrigger>win.formValidate</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

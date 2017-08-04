@@ -1,0 +1,44 @@
+<snippet>
+	<content><![CDATA[
+\$W.Add({
+			idApply : "form_tbar_comerciantes",
+			items   :
+			[
+				{
+					xtype     : "button",
+					text      : "Contacto",
+					scale     : "large",
+					iconCls   : "contacto",
+					iconAlign : "top",
+					handler   : function(){ contacto_select('<?php echo \$indexClass ?>'); }
+				}
+			]
+		});
+
+		function contacto_select(id_comerciantes){
+			win_contacto_select = new \$W.Window({
+				id          : "win_contacto_select",
+				title       : "Ventana Contactos",
+				width       : 800,
+				height      : "calc(100% - 100px)",
+				scrollY 	: true,
+				modal       : true,
+				closable    : true,
+				drag        : true,
+				resize      : true,
+				autoLoad    :
+				{
+					url     : "../comerciantes/contactos.php",
+					params  :
+					{
+						id_comerciantes : id_comerciantes
+					}
+				}
+			});
+		}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wgrilla.agregabtntolbar_manual_vinset_vupdate</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

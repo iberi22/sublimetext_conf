@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+\$grilla->AddRowImage('CampoBd','<center><div style="float:left; margin: 0 0 0 7px"><img src="images/[tipo].png" style="cursor:pointer" width="16" height="16"></div></center>',60);
+]]>
+	</content>
+
+	<tabTrigger>grilla.imageRowLocal</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

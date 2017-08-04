@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+\$W.Ajax({
+	url    : url,
+	params :
+	{
+		opc  : "opc",
+		var1 : "var1"
+	},
+	success : function(result,xhr){
+		json = JSON.parse(result.responseText)
+	},
+	failure : function(xhr){ console.log("fail"); }
+})
+]]>
+	</content>
+
+	<tabTrigger>win.ajax</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

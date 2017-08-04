@@ -1,0 +1,80 @@
+<snippet>
+	<content><![CDATA[
+    include("../../../configuracion/conectar.php");
+    include("../../../configuracion/define_variables.php");
+    include("../../../misc/Grilla/class.Grilla.php");
+
+    /**//////////////////////////////////////////////**/
+    /**///       INICIALIZACION DE LA CLASE       ///**/
+    /**/                                            /**/
+    /**/    \$grilla = new Grilla(\$mysql,\$_POST);   /**/
+    /**/                                            /**/
+    /**//////////////////////////////////////////////**/
+
+
+	// CONFIG
+		\$grilla->Name     = '';	// NOMBRE NEW INSTANCIA DEL OBJETO
+		\$grilla->Table    = '';  // TABLA EN BASE DE DATOS
+		\$grilla->SqlLimit = '0,100';	    // LIMITE DE LA CONSULTA
+		\$grilla->SqlWhere = 'activo=1';   	// SQL CONDICION
+		\$grilla->SqlGroup = '';   	        // GROUP BY
+		\$grilla->SqlOrder = '';   	        // ORDER BY
+		\$grilla->SqlDebug = false;   		// CAMPO DEBUG QUERY MYSQL
+		\$grilla->FUpdate = false;   		// DEBUG SQL
+
+	//TOOLBAR Y CAMPO DE BUSQUEDA Y FILTROS
+		\$grilla->Tbar         = true;		// SI LA GRILLA LLEVA EL TOOLBAR DE BUSQUEDA
+		\$grilla->Toolbar      = true;		// SI LA GRILLA LLEVA EL TOOLBAR DE BUSQUEDA
+		\$grilla->FieldToolbar = 'nombre';  // CAMPOS DE BUSQUEDA DE LA GRILLA
+
+	// CAMPOS
+		\$grilla->AddColHtml('Estado','<center><div style="float:left; margin: 0 0 0 7px"><img src="./temas/images/estados/estado_[estado].png" style="cursor:pointer" width="16" height="16"></div></center>',40); // CAMPO EN LA GRILLA PARA INSERTAR HTML(IMAGENES O EVENTS JS)
+		\$grilla->AddCol('Nombre','nombre',250);
+
+	// CONFIG FORMULARIO
+		\$grilla->FAuto  = true;			// SI LA VENTANA DE INSERT, UPDATE Y DELETE ES AUTOMATICA O MANUAL
+		\$grilla->FTitle = 'TITLE FORM';  	// NOMBRE DE LA VENTANA DE INSER, UPDATE Y DELETE
+
+	// ESTILO FORMULARIO
+		\$grilla->FAncho      = 270;
+		\$grilla->FAlto       = 155;
+		\$grilla->FLabelAncho = 50;
+
+	// FORMULARIO
+		\$grilla->AddTextField('Frecuencia','frecuencia',160,'true');                                                          //CAMPO INPUT
+		\$grilla->AddComboBox ('Nombre','nombre',160,'true','false',array("campoenBD"=>"campoenHTMLview", "nombre"=>"Nombre")); //LISTA DESPLEGABLE
+
+		\$grilla->AddValidation('frecuencia','integer');			                                                           //VALIDAR CAMPO
+
+		\$grilla->AddSqlField('id_empresa', \$idEmpresa);	//CAMPO QUE SE INSERTA EN BD Y NO SE MUESTRA EN EL DOM
+		\$grilla->AddSqlField('fecha', date('Y-m-d'));		//CAMPO QUE SE INSERTA EN BD Y NO SE MUESTRA EN EL DOM
+		\$grilla->AddSqlField('hora', date("H:i:s"));		//CAMPO QUE SE INSERTA EN BD Y NO SE MUESTRA EN EL DOM
+
+
+		/**//////////////////////////////////////////////////////**/
+		/**///			INICIALIZACION DE LA GRILLA	  		  ///**/
+		/**/													/**/
+		/**/				\$grilla->IniClass();				/**/
+		/**/													/**/
+		/**//////////////////////////////////////////////////////**/
+
+if(!isset(\$opcionClass)){ ?>
+
+    <script></script>
+
+<?php
+}
+
+else if(\$opcionClass == "vInsert" || \$opcionClass == "vUpdate"){ ?>
+
+    <script></script>
+
+<?php
+}
+]]>
+	</content>
+
+	<tabTrigger>wgrilla.form_auto</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

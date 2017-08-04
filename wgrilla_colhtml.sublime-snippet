@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+\$grilla->AddColHtml('Estado','<center><div style="float:left; margin: 0 0 0 7px"><img src="../../temas/images/estados/estado_[estado].png" style="cursor:pointer" width="16" height="16"></div></center>',40);
+]]>
+	</content>
+
+	<tabTrigger>wgrilla.ColHtml</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

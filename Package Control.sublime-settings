@@ -1,0 +1,24 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"BracketHighlighter",
+		"HTMLBeautify",
+		"JSHint",
+		"Package Control",
+		"Seti_UI",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-jsdebugmarkers",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
+		"Theme - Dark Material",
+		"Theme - Soda",
+		"TrailingSpaces",
+		"Trimmer"
+	]
+}

@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+\$W.Add({
+	idApply : "id_tbar",
+	items   :
+	[
+		{
+			xtype     : "button",
+			text      : "boton1",
+			scale     : "large",
+			iconCls   : "guardar",
+			iconAlign : "top",
+			handler   : function(){ alert(1) }
+		}
+	]
+})
+]]>
+	</content>
+
+	<tabTrigger>win.addBoton</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

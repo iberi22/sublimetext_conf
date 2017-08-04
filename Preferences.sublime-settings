@@ -1,0 +1,53 @@
+{
+	"alignment_chars":
+	[
+		"=",
+		":"
+	],
+	"alignment_prefix_chars":
+	[
+		"+",
+		"-",
+		"&",
+		"|",
+		"<",
+		">",
+		"!",
+		"~",
+		"%",
+		"/",
+		"*",
+		".",
+		"=",
+		":"
+	],
+	"alignment_space_chars":
+	[
+		"=",
+		":"
+	],
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"enable_docstrings_tooltip": false,
+	"enable_signatures_tooltip": false,
+	"font_options":
+	[
+		"Dejavu Sans Mono"
+	],
+	"font_size": 8,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"index_files": false,
+	"overlay_scroll_bars": "enabled",
+	"save_on_focus_lost": true,
+	"shift_tab_unindent": true,
+	"show_encoding": true,
+	"tab_height": 20,
+	"theme": "Dark-Material.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"update_check": false,
+	"word_wrap": true
+}

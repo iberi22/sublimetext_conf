@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+new Ext.form.DateField({
+    emptyText  : 'Insert a date...',    //PLACEHOLDER
+    fieldLabel : 'Date from today',     //SI TIENE LABEL
+    format     : 'Y-m-d',               //FORMATO
+    width      : 130,                   //ANCHO
+    allowBlank : false,
+    showToday  : false,
+    applyTo    : '$1',
+    editable   : false,                 //EDITABLE
+    maxValue   : '2009-08-28',          //MAXIMO
+    minValue   : '2009-08-28',          //MINIMO
+    value      : new Date(),             //VALOR POR DEFECTO
+    listeners  : { select: function() {   } }
+});
+]]>
+	</content>
+
+	<tabTrigger>ext.date</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

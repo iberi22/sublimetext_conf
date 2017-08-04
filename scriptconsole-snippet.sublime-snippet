@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+echo '<script>console.log("entro")</script>';
+]]></content>
+	<tabTrigger>scri.log</tabTrigger>
+</snippet>
+
+
+
+

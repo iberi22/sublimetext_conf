@@ -1,0 +1,88 @@
+<snippet>
+	<content><![CDATA[
+$1 = new \$W.Window({
+	id          : "$1",
+	title       : "title",
+	width       : 800,
+	height      : "calc(100% - 20px)",
+	scrollY 	: true,
+	modal       : true,
+	closable    : true,
+	drag        : true,
+	resize      : true,
+	autoLoad    :
+	{
+		url     : "$2.php",
+		params  :
+		{
+			opc  : "prueba_ajax",
+			var2 : "var2", 
+		}
+	},
+	items :
+	[
+		{
+			xtype : "tbar",
+			items :
+			[
+				{
+					xtype   : "button",
+					id      : "btn_1",
+					cls     : "user_black_36",
+					text    : "Nueva ventana",
+					handler : function(){ ventana2(); }
+				},
+				{
+					xtype     : "panel", 
+					width     : 160,
+					height    : 56,
+					bodyStyle : "border:1px solid #2a80b9;",
+					html      : "<div>contenido por parametro</div>",
+					autoLoad  :
+					{
+						url		: "bd.php",
+						params	:
+						{
+							opc    : "prueba_ajax_load",
+							prueba : 1
+						}
+					}
+				},
+				{
+					xtype   : "button",
+					id      : "btn_2",
+					text    : "ajax load",
+					cls     : "ic_autorenew_black_36dp",
+					handler : function () { ajax_load(); },
+				},
+				{
+					xtype   : "button",
+					id      : "btn_2",
+					text    : "ajax request",
+					cls     : "ic_autorenew_black_36dp",
+					handler : function () { ajax_request();	},
+				}
+				,"->","-",
+				{
+					xtype   : "button",
+					id      : "btn_1",
+					text    : "Salir",
+					cls     : "icon-action-black-ic_perm_identity_black_24dp",
+					handler : function(){ alert(4); ventana2(); }
+				},"--",
+				{
+					xtype : "tbtext",
+					id    : "btn_1",
+					text  : "una demostracion de un texto largo<br>con salto de linea",
+				}
+			]
+		}
+	]
+});
+]]>
+	</content>
+
+	<tabTrigger>win.window</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

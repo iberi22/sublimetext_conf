@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+// JOIN
+\$grilla->SqlJoin("INNER JOIN ubicacion_ciudad AS U ON (
+							U.id = T1.id_ciudad
+							AND U.id_departamento = T1.id_departamento
+						)");
+
+\$grilla->AddCol('CONT','COUNT(T1.nit) AS cont',100);
+\$grilla->AddCol('NIT','T1.nit',100);
+//:::::::::::::::::::::::::::::::::
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>wgrilla.sqljoin</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

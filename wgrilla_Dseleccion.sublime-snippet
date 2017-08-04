@@ -1,0 +1,77 @@
+<snippet>
+	<content><![CDATA[
+
+	include("../../../configuracion/conectar.php");
+	include("../../../configuracion/define_variables.php");
+	include("../../../misc/Grilla/class.Grilla.php");
+
+	/**//////////////////////////////////////////////**/
+	/**///		 INICIALIZACION DE LA CLASE  	  ///**/
+	/**/											/**/
+	/**/     \$grilla = new Grilla(\$mysql,\$_POST);/**/
+	/**/											/**/
+	/**//////////////////////////////////////////////**/
+
+	// CONFIG
+		\$grilla->Name         = 'comerciantes';	// NOMBRE NEW INSTANCIA DEL OBJETO
+		\$grilla->Table        = 'comerciantes';		// TABLA EN BASE DE DATOS
+		\$grilla->SqlLimit	  = '0,100';			// LIMITE DE LA CONSULTA
+		\$grilla->SqlWhere	  = 'activo=1';
+		\$grilla->SqlOrder     = 'id DESC';           //LIMITE DE LA CONSULTA
+
+	//TOOLBAR Y CAMPO DE BUSQUEDA Y FILTROS
+		\$grilla->Tbar      	  = true;				// SI LA GRILLA LLEVA EL TOOLBAR DE BUSQUEDA
+		\$grilla->Toolbar      = true;				// SI LA GRILLA LLEVA EL TOOLBAR DE BUSQUEDA
+		\$grilla->FieldToolbar = 'user_save,user_delete'; 			// CAMPOS DE BUSQUEDA DE LA GRILLA
+
+	// CAMPOS
+		\$grilla->AddCol('NIT','nit',100);
+		\$grilla->AddCol('Nombre','nombre',100);
+		\$grilla->AddCol('Razon solcial','razon_social',100);
+		\$grilla->AddCol('ciudad','ciudad',100);
+		\$grilla->AddCol('Telefono','telefono',90);
+		// \$grilla->AddColHtml('Contacto','<div class="fa fa-plus-square fa-1x" style="cursor:pointer" width="16" height="16" onclick="we();"></div>',20);
+
+
+		\$grilla->VentanaAuto   = 'false';			// SI LA VENTANA DE INSERT, UPDATE Y DELETE ES AUTOMATICA O MANUAL
+		\$grilla->TituloVentana = 'comerciantes';		// NOMBRE DE LA VENTANA DE INSER, UPDATE Y DELETE
+		// CONFIG FORMULARIO
+		//NOMBRE DE LA VENTANA DE INSER, UPDATE Y DELETE
+		\$grilla->EventUpdate    = 'selected_comerciante'; //NOMBRE DE LA VENTANA DE INSER, UPDATE Y DELETE
+		\$grilla->FPermisoInsert = false; //NOMBRE DE LA VENTANA DE INSER, UPDATE Y DELETE
+
+
+
+		/**//////////////////////////////////////////////////////**/
+		/**///			INICIALIZACION DE LA GRILLA	  		  ///**/
+		/**/													/**/
+		/**/				\$grilla->IniClass();				/**/
+		/**/													/**/
+		/**//////////////////////////////////////////////////////**/
+
+if(!isset(\$opcionClass)){ ?>
+	<script>
+	function selected_comerciante(id){
+		var nombre = document.getElementById('div_comerciantes_nombre_'+id).innerHTML;
+		console.log(nombre)
+		document.getElementById('form_empresas_centros_local_comercial').value=nombre;
+		document.getElementById('form_empresas_centros_local_id_comercial').value=id;
+		Win_ventana_select_comerciante.close();
+	}
+	</script>
+<?php
+}
+else if(\$opcionClass == "vIinsert" || \$opcionClass == "vUpdate"){ ?>
+	<script>
+
+
+	</script>
+
+<?php
+}
+]]>
+	</content>
+	<tabTrigger>wgrilla.de_seleccion</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

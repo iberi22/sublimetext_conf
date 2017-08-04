@@ -1,0 +1,63 @@
+<snippet>
+	<content>
+		<![CDATA[
+  	include("../../configuracion/conectar.php");
+    include("../../configuracion/define_variables.php");
+    include("../../misc/Grilla/class.Grilla.php");
+    /**//////////////////////////////////////////////**/
+    /**///       INICIALIZACION DE LA CLASE       ///**/
+    /**/                                            /**/
+    /**/    \$grilla = new Grilla(\$mysql,\$_POST);   /**/
+    /**/                                            /**/
+    /**//////////////////////////////////////////////**/
+	// CONFIG
+		\$grilla->Name     	  	= '';	// NOMBRE NEW INSTANCIA DEL OBJETO
+		\$grilla->Table    	  	= '';  // TABLA EN BASE DE DATOS
+		\$grilla->SqlLimit 	  	= '0,100';	        // LIMITE DE LA CONSULTA
+		\$grilla->SqlWhere 	  	= 'activo=1';   	// SQL CONDICION
+		\$grilla->SqlOrder 	    = 'nombre';   	    // ORDER BY
+	//TOOLBAR Y CAMPO DE BUSQUEDA Y FILTROS
+		\$grilla->Tbar         	= true;		        // SI LA GRILLA LLEVA EL TOOLBAR DE BUSQUEDA
+		\$grilla->Toolbar      	= true;		        // SI LA GRILLA LLEVA EL TOOLBAR DE BUSQUEDA
+		\$grilla->FieldToolbar 	= 'nombre,nit';     // CAMPOS DE BUSQUEDA DE LA GRILLA
+	// CAMPOS
+		\$grilla->AddCol('Nombre','nombre',300);
+		\$grilla->AddCol('Cedula','cedula',150);
+		\$grilla->AddCol('NIT','nit',150);
+	// CONFIG FORMULARIO O EVENTOS
+		\$grilla->EventUpdate    = 'selection';	  // EVENTO QUE DISPARA FUNCTION PARA CAPTURAR LOS DATOS HE INYECTARLOS
+		\$grilla->FPermisoInsert = false;	      //BLOQUEO PARA LOS BOTONES SUPERIORES DE INSERT
+	/**//////////////////////////////////////////////////////**/
+	/**///			INICIALIZACION DE LA GRILLA	  		  ///**/
+	/**/													/**/
+	/**/				\$grilla->IniClass();				/**/
+	/**/													/**/
+	/**//////////////////////////////////////////////////////**/
+
+    if(!isset(\$opcionClass)){ ?>
+
+        <script>
+			function selection(id){
+				var nombre = document.getElementById('div_nombre_'+id).innerHTML;
+				document.getElementById('cliente').value    = nombre;//CAMPOS INYECTADOS
+				document.getElementById('id_cliente').value = id;//CAMPOS INYECTADOS
+				>NOMBRE DE LA VENTANA QUE LAZA LA GRILLA.close();
+			}
+		</script>
+
+    <?php
+    }
+
+    else if(\$opcionClass == "vInsert" || \$opcionClass == "vUpdate"){ ?>
+
+        <script></script>
+
+    <?php
+    }
+
+		]]>
+	</content>
+	<tabTrigger>wgrilla.de_seleccion</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

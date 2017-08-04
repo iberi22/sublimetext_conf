@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+\$W.Form.field({
+	idApply : "id_input",
+	type    : "integer"		// integer, double, email, upercase, lowercase
+});
+]]>
+	</content>
+
+	<tabTrigger>win.fieldValidate</tabTrigger> <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
