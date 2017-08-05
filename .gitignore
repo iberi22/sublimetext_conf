@@ -1,0 +1,5 @@
+/*.user-ca-bundle
+/*.crt
+/Package Control.merged-ca-bundle
+/bh_core.sublime-settings
+Package Control.cache
