@@ -384,6 +384,7 @@
 				<string>#A6E22E</string>
 			</dict>
 		</dict>
+
 		<dict>
 			<key>name</key>
 			<string>diff.changed</string>
@@ -455,7 +456,23 @@
                 <key>foreground</key>
                 <string>#e1ff00</string>
             </dict>
-        </dict></array>
+        </dict>
+        <!--appended to default to work with bh_core.sublime-settings brackethighlighter.default style-->
+		<dict>
+			<key>name</key>
+			<string>Bracket Tag</string>
+			<key>scope</key>
+			<string>brackethighlighter.default</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#1FA505</string>
+				<key>foreground</key>
+				<string>#FFF600</string>
+			</dict>
+		</dict>
+
+    </array>
 	<key>uuid</key>
 	<string>D8D5E82E-3D5B-46B5-B38E-8C841C21347D</string>
 </dict>

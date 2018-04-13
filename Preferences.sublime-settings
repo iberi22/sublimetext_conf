@@ -35,9 +35,11 @@
 	[
 		"Dejavu Sans Mono"
 	],
-	"font_size": 8,
+	"font_size": 9,
+	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"SublimeLinter-php",
 		"Vintage"
 	],
 	"index_files": false,
@@ -46,7 +48,7 @@
 	"shift_tab_unindent": true,
 	"show_encoding": true,
 	"tab_height": 20,
-	"theme": "Dark-Material.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
 	"word_wrap": true
