@@ -1,0 +1,29 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"BracketHighlighter",
+		"ColorPicker",
+		"HTMLBeautify",
+		"JSHint",
+		"Package Control",
+		"Seti_UI",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-jsdebugmarkers",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
+		"Theme - Dark Material",
+		"Theme - Soda",
+		"TrailingSpaces",
+		"Trimmer"
+	],
+	"repositories":
+	[
+		"https://raw.github.com/Grafikart/ST3-LiveReload/master/package.json"
+	]
+}
