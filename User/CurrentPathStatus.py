@@ -23,7 +23,8 @@ class ShowFilenameInStatus(sublime_plugin.EventListener):
 	    if filename is None:
 	        view.erase_status('_filename')
 	    else:
-	        view.set_status('_filename', "           Path: " + path+"          FileName:  "+filename+"   ")
+	        # view.set_status('_filename', "           Path: " + path+"         FileName:  "+filename+"   ")
+	        view.set_status('_filename', "Path: " + path+"\\"+filename)
 
 # 	        import sublime_plugin
 

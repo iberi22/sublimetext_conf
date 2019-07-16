@@ -40,11 +40,6 @@
 	"enable_docstrings_tooltip": false,
 	"enable_signatures_tooltip": false,
 	"enable_tab_scrolling": false,
-	"enabled_plugins":
-	[
-		"SimpleReloadPlugin",
-		"SimpleRefresh"
-	],
 	"font_face": "Inconsolata",
 	"font_options":
 	[
@@ -66,8 +61,9 @@
 	"scroll_speed": 5.0,
 	"shift_tab_unindent": true,
 	"show_encoding": true,
-	"show_full_path": false,
+	"show_full_path": true,
 	"side_bar_medium": true,
+	"sublime_enhanced_keybindings": true,
 	"tab_height": 20,
 	"tabs_medium": true,
 	"theme": "Adaptive.sublime-theme",
