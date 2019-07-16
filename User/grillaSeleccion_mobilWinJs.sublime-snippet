@@ -1,0 +1,38 @@
+<snippet>
+	<content><![CDATA[
+	/**//////////////////////////////////////////////**/
+	/**///  grilla de seleccion recureda la connexion!!!/**/
+	/**/	grilla de seleccion recureda la connexion!!!/**/
+	/**/    grilla de seleccion recureda la connexion!!!/**/
+	/**/	grilla de seleccion recureda la connexion!!!/**/
+	/**//////////////////////////////////////////////**/
+
+		\$grilla              	= new Grilla(\$mysql,\$_POST);
+		\$grilla->Name        	= 'responsable';
+		\$grilla->Table       	= 'empleados';
+		\$grilla->SqlLimit	 	= '0,100';
+		\$grilla->SqlWhere 		= \$WHERE." AND id NOT IN ( SELECT id_empleado FROM pedido_logistico_operarios WHERE id_pedido ='\$id_pedido' )";
+		// $grilla->SqlDebug 		= true;
+		\$grilla->SqlOrder 		= 'id DESC';
+		\$grilla->AddColHtmlMovil('nombre','<div id ="nombre_responsable[id]"style="font-size:12px; font-weight:bold">[nombre]</div>','calc(100% - 70px)');
+		\$grilla->TituloVentana  = 'comerciantes';
+		\$grilla->EventUpdate    = 'selected_responsable';
+		\$grilla->FPermisoInsert = false;/*boton nuevo disable*/
+		\$grilla->IniClass();
+		?>
+			<script>
+				function selected_responsable(id){
+					\$W("#input_responsable").val(\$W('#nombre_responsable'+id).html());/*get data and set in same line*/
+					\$W("#id_responsable").val(id);
+					Win_cargarresponsable.close();
+				}
+			</script>
+		<?php
+
+
+]]>
+	</content>
+	<tabTrigger>wgrilla.MOBIL_Seleccion</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
