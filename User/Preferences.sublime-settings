@@ -28,7 +28,7 @@
 	],
 	"always_show_minimap_viewport": true,
 	"auto_close_tags": true,
-	"auto_match_enabled": true,
+	"auto_complete": false,
 	"bold_folder_labels": false,
 	"caret_extra_bottom": 3,
 	"caret_extra_top": 3,
@@ -40,11 +40,11 @@
 	"enable_docstrings_tooltip": false,
 	"enable_signatures_tooltip": false,
 	"enable_tab_scrolling": false,
-	"font_face": "Inconsolata",
+	"font_face": "Hack",
 	"font_options":
 	[
 	],
-	"font_size": 11,
+	"font_size": 10,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
